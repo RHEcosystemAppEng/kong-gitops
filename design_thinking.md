@@ -5,8 +5,8 @@
     - Getting the password of UI
     - import the CP and DP clusters
 
-
-# Kong Gateway Control Plane 
+# OpenShift Deployment
+## Kong Gateway Control Plane 
     - Pre-requisites
         - create ns for kong
         - Create RBAC rules
@@ -15,6 +15,7 @@
             - Then using hashicorp vault (In 2nd iteration) 
                 - https://cloud.redhat.com/blog/how-to-use-hashicorp-vault-and-argo-cd-for-gitops-on-openshift
         - Generate cert + secret 
+        - Monitoring infra (Prometheus + grafana)
     -  Deploy control plane 
         - Variation from what we have done? - For postgres, we need to use the postgres subchart from kong
         - Best practice - use helm values (cp-values.yaml) (+) use kustomize
@@ -33,7 +34,7 @@
     - References
         - https://argo-cd.readthedocs.io/en/stable/
 
-# Kong Gateway Data Plane
+## Kong Gateway Data Plane
     - Pre-requisites
         - same as above
     - Infra component
@@ -50,4 +51,13 @@
         - https://argo-cd.readthedocs.io/en/stable/
 
     
+## Kong Mesh Control Plane
+## Kong Mesh Data Plane
 
+
+# Hybrid deployment (CP - on AWS VM nd DP - on OpenShift clusters)
+
+## Kong Gateway Control Plane 
+## Kong Gateway Data Plane
+## Kong Mesh Control Plane
+## Kong Mesh Data Plane
