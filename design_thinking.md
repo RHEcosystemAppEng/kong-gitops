@@ -61,3 +61,13 @@
 ## Kong Gateway Data Plane
 ## Kong Mesh Control Plane
 ## Kong Mesh Data Plane
+
+
+# Hybrid deployment (CP - on OpenShift clusters nd DP - on AWS VM)
+
+## Kong Gateway Control Plane 
+## Kong Gateway Data Plane
+## Kong Mesh Control Plane
+## Kong Mesh Data Plane
+
+# Both CP and DP on VMs (outside Red Hat Scope)
