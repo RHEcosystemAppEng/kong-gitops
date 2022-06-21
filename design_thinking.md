@@ -6,14 +6,14 @@
     - import the CP and DP clusters
 
 
-# Kong Gateway Control Plane
+# Kong Gateway Control Plane 
     - Pre-requisites
         - create ns for kong
     - Infra components
         - create license secret (first manually)
-            - Then using hashicorp vault (In 2nd iteration)
+            - Then using hashicorp vault (In 2nd iteration) 
+                - https://cloud.redhat.com/blog/how-to-use-hashicorp-vault-and-argo-cd-for-gitops-on-openshift
         - Generate cert + secret 
-        - Keycloak server in control plane or data plane?
     -  Deploy control plane - use kustomize
         - Variation from what we have done? - For postgres, we need to use the postgres subchart from kong
         - Best practice - use helm values (cp-values.yaml)
@@ -27,19 +27,26 @@
         - admin endpoint
         - Any other additional validation
     - Technical notes
-        - Chain all the app deployments
+        - Order-Dependent Deployments 
+            - https://argo-cd.readthedocs.io/en/stable/user-guide/sync-waves/
+    - References
+        - https://argo-cd.readthedocs.io/en/stable/
 
 # Kong Gateway Data Plane
     - Pre-requisites
         - same as above
     - Infra component
         - same as above
+        - (+) - Keycloak server
     - Deploy data plane (using dp-values.yaml) - use kustomize
     - Post install of kong dp
     - validation
         - check clustering
         - any additional validation
-    
+    - Technical Notes
+        - Order - dependent deployments (https://argo-cd.readthedocs.io/en/stable/user-guide/sync-waves/)
+        - References
+        - https://argo-cd.readthedocs.io/en/stable/
 
     
 
