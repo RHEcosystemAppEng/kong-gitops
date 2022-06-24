@@ -13,7 +13,7 @@
     - Infra components
         - create license secret (first manually)
             - Then using hashicorp vault (In 2nd iteration) 
-                - https://cloud.redhat.com/blog/how-to-use-hashicorp-vault-and-argo-cd-for-gitops-on-openshift
+                - https://cloud.redhat.com/blog/how-to-use-hashicorp-vault-and-argo-cd-for-gitops-on-openshift [The blog is incorrect]
         - Generate cert + secret 
         - Monitoring infra (Prometheus + grafana)
     -  Deploy control plane 
