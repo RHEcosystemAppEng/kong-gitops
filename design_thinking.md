@@ -6,7 +6,7 @@
     - import the CP and DP clusters
 
 # OpenShift Deployment
-## Kong Gateway Control Plane 
+## Kong Gateway Control Plane - Iteration 1 (94% of business)
     - Pre-requisites
         - create ns for kong
         - Create RBAC rules
@@ -15,7 +15,7 @@
             - Then using hashicorp vault (In 2nd iteration) 
                 - https://cloud.redhat.com/blog/how-to-use-hashicorp-vault-and-argo-cd-for-gitops-on-openshift [The blog is incorrect]
         - Generate cert + secret 
-        - Monitoring infra (Prometheus + grafana)
+        - Postgresql
     -  Deploy control plane 
         - Variation from what we have done? - For postgres, we need to use the postgres subchart from kong
         - Best practice - use helm values (cp-values.yaml) (+) use kustomize
@@ -34,13 +34,16 @@
     - References
         - https://argo-cd.readthedocs.io/en/stable/
 
-## Kong Gateway Data Plane
+## Kong Gateway Data Plane - Iteration 1 (94% of business)
     - Pre-requisites
         - same as above
     - Infra component
         - same as above
+        - (-) postgresql?
         - (+) Keycloak server
-    - Deploy data plane (using dp-values.yaml) - use kustomize
+        - (+) Monitoring infra (Prometheus + grafana)
+    - Deploy data plane (using dp-values.yaml)
+    - Patch the deployment for CLUSTER_URL & CLUSTER_TELEMETRY_URL
     - Post install of kong dp
     - validation
         - check clustering
@@ -50,9 +53,9 @@
         - References
         - https://argo-cd.readthedocs.io/en/stable/
 
-    
-## Kong Mesh Control Plane
-## Kong Mesh Data Plane
+
+## Kong Mesh Control Plane - Iteration2
+## Kong Mesh Data Plane - Iteration2
 
 
 # Hybrid deployment - 1
