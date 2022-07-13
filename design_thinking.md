@@ -6,7 +6,7 @@
     - import the CP and DP clusters
 
 # OpenShift Deployment
-## Kong Gateway Control Plane - Iteration 1 (94% of business)
+## Kong Gateway Control Plane - Iteration 1 
     - Pre-requisites
         - create ns for kong
         - Create RBAC rules
@@ -34,7 +34,7 @@
     - References
         - https://argo-cd.readthedocs.io/en/stable/
 
-## Kong Gateway Data Plane - Iteration 1 (94% of business)
+## Kong Gateway Data Plane - Iteration 1 
     - Pre-requisites
         - same as above
     - Infra component
